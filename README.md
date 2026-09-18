@@ -2,9 +2,6 @@
 
 用于 RoboTwin 2.0 Aloha-AgileX 的 50 任务比赛。训练只使用每任务 50 条 clean 数据；正式评测为 50 任务 × clean/randomized × 100 次。
 
-这个目录是独立 Git 仓库，origin 为 https://github.com/YangLee019/BananaPeels.git。
-本地准备环境与现有 ROS 2 / Blender 环境隔离。训练数据、模型权重、环境和上游源码不加入 Git。
-
 本次安装与验证结果见 [基础环境验证记录](docs/setup_status.md)。
 
 ## 本地基础环境
