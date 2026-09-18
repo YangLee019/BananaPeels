@@ -1,0 +1,12 @@
+# Source: user-provided 2026 competition rules and the official JSON template.
+model_repo: robbyant/lingbot-vla-v2-6b
+dataset_repo: TianxingChen/RoboTwin2.0
+task_template: templates/results.template.json
+embodiment: aloha-agilex
+training:
+  setting: clean
+  episodes_per_task: 50
+  archive_pattern: dataset/{task}/aloha-agilex_clean_50.zip
+evaluation:
+  settings: [clean, randomized]
+  attempts_per_task: 100

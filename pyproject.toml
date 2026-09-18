@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "banana-peels"
+version = "0.1.0"
+description = "LingBot-VLA 2.0 competition workspace and lightweight preparation tools"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["huggingface-hub>=0.34,<1", "PyYAML>=6,<7"]
+
+[project.scripts]
+banana-peels = "banana_peels.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<9", "ruff>=0.12,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/banana_peels"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
